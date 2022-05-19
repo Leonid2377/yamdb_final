@@ -2,22 +2,30 @@ version: '3.8'
 
 services:
   db:
-#    image: postgres:13.0-alpine
-    image: postgres:latest
+    image: postgres:13.0-alpine
+#    image: postgres:latest
     volumes:
       - /var/lib/postgresql/data/
     env_file:
       - ./.env
+
   web:
-    build: .
+    image: leonid2377/yamdb_final:latest
     restart: always
-    volumes:
-      - static_value:/app/static/
-      - media_value:/app/media/
     depends_on:
       - db
     env_file:
-      - ./.env
+      - .env
+#  web:
+#    build: .
+#    restart: always
+#    volumes:
+#      - static_value:/app/static/
+#      - media_value:/app/media/
+#    depends_on:
+#      - db
+#    env_file:
+#      - ./.env
 
   nginx:
     image: nginx:1.21.3-alpine
