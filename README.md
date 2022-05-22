@@ -1,4 +1,5 @@
-# infra_sp2
+![example workflow](https://github.com/Leonid2377/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+# yamdb_final
 #Описание проекта
 Проект позволяет зарегистрироваться пользователям
 и оставлять отзывы на различные произведения
