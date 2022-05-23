@@ -23,9 +23,28 @@
 >> `docker-compose up -d --build`
 >
 >>`docker-compose exec web python manage.py migrate`
+> 
+>>`docker-compose exec web python manage.py createsuperuser`
+>
+>>`docker-compose exec web python manage.py collectstatic --no-input`
+
+ 
+>Создать файл .env из директории infra/ и внестите в него данные:
+>
+>>`DB_ENGINE=django.db.backends.postgresql`
+>
+>>`DB_NAME=postgres`
+>
+>>`POSTGRES_USER=postgres`
+>
+>>`POSTGRES_PASSWORD= # установите свой пароль`
+>
+>>`DB_HOST=db`
+>
+>>`DB_PORT=5432`
 
 > остановить проект: `docker-compose down -v`
 
-**проект работает по адресу 84.201.179.254**
+**проект запущен по адресу 130.193.53.155**
 
 **Автор проекта: Старостин Леонид** 
