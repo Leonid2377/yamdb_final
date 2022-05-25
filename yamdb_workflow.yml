@@ -46,6 +46,7 @@ jobs:
           with:
             push: true
             tags: leonid2377/yambd_final:latest
+            file: ./api_yamdb/Dockerfile
 
 
   deploy:
