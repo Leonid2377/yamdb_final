@@ -23,8 +23,8 @@ jobs:
       run: |
         python -m flake8
         pytest
-        cd api_yamdb/
-        python manage.py test
+#        cd api_yamdb/
+#        python manage.py test
         
 
   build_and_push_to_docker_hub:
@@ -47,6 +47,7 @@ jobs:
             push: true
             tags: leonid2377/yambd_final:latest
             file: ./api_yamdb/Dockerfile
+            context: ./api_yamdb/
 
 
   deploy:
