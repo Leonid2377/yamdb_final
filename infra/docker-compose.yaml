@@ -8,7 +8,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: leonid2377/test3:latest
+    image: leonid2377/test4:latest
     restart: always
     volumes:
       - static_value:/app/static/

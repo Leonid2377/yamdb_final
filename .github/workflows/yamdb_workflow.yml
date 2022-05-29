@@ -42,7 +42,7 @@ jobs:
         with:
           context: api_yamdb/
           push: true
-          tags: leonid2377/test3:latest
+          tags: leonid2377/test4:latest
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
@@ -55,7 +55,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |          
-            sudo docker pull leonid2377/test3:latest
+            sudo docker pull leonid2377/test4:latest
             sudo docker compose stop
             sudo docker compose rm web
             touch .env
